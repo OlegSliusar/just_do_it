@@ -6,6 +6,6 @@ get '/' do
 end
 
 get '/:task' do
-  @task = params[:task]
+  @task = params[:task].split('-').join(' ').capitalize
   slim :task
 end
