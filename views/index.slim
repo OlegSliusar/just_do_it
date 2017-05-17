@@ -1,4 +1,9 @@
-h2 My Tasks
-ul.tasks
-  li Get Milk
+form action='/' method='POST'
+  input (type='text' name='task' autofocus)
+  input.button type='submit' value='New Task >>'
   
+h2 My Tasks
+
+ul.tasks
+  - @tasks.each do |task|
+    li.task = task.name
