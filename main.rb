@@ -14,8 +14,8 @@ get '/:task' do
   slim :task
 end
 
-post '/' do
-  Task.create params[:task]
+post '/:id' do
+  List.get(params[:id]).tasks.create params['task']
   redirect to('/')
 end
 
@@ -39,6 +39,10 @@ end
 delete '/list/:id' do
   List.get(params[:id]).destroy
   redirect to('/')
+end
+
+get '/styles.css' do
+  scss :styles
 end
 
 class Task

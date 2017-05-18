@@ -5,7 +5,6 @@
 .tasks{
   padding:0;
   list-style:none;
-  width:400px;
   }
 
 .task{
@@ -40,4 +39,30 @@ form.delete input{
   cursor:pointer;
   border:none;
   }
-  
+
+.lists{
+  padding:0;
+  list-style:none;
+  overflow:hidden;
+  }
+
+.list{
+  float: left;
+  width:23%;
+  margin:0 1%;
+  border-top:solid 5px #ccc;
+  }
+
+  h1.logo{
+    font-family: helvetica,arial,sans-serif;
+    font-size: 24px;
+    color: white;
+    padding: 64px 0 0;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 0.3em;
+    background: transparent url(/logo.png) 50% 0 no-repeat;
+    }
+    
