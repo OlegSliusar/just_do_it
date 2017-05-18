@@ -1,15 +1,24 @@
-require 'sinatra'
-require 'slim'
-require 'data_mapper'
+
+class Task
+  include DataMapper::Resource
+  property :id,           Serial
+  property :name,         String, :required => true
+  property :completed_at, DateTime
+  belongs_to :list
+end
+
+class List
+  include DataMapper::Resource
+  property :id, Serial
+  property :name, String, :required => true
+  has n, :tasks, :constraint => :destroy
+end
+
+DataMapper.finalize
 
 get '/' do
   @lists = List.all(:order => [:name])
   slim :index
-end
-
-get '/:task' do
-  @task = params[:task].split('-').join(' ').capitalize
-  slim :task
 end
 
 post '/:id' do
@@ -42,20 +51,3 @@ end
 get '/styles.css' do
   scss :styles
 end
-
-class Task
-  include DataMapper::Resource
-  property :id,           Serial
-  property :name,         String, :required => true
-  property :completed_at, DateTime
-  belongs_to :list
-end
-
-class List
-  include DataMapper::Resource
-  property :id, Serial
-  property :name, String, :required => true
-  has n, :tasks, :constraint => :destroy
-end
-
-DataMapper.finalize
