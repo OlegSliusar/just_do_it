@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
-ruby '1.9.2'
+ruby '2.2.7'
 gem 'json', '~> 1.6'
 gem "sinatra", '1.2.6'
 gem 'slim', '~> 1.0'

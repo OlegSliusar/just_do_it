@@ -90,7 +90,7 @@ DEPENDENCIES
   slim (~> 1.0)
 
 RUBY VERSION
-   ruby 1.9.2p330
+   ruby 2.2.7p470
 
 BUNDLED WITH
    1.14.6
