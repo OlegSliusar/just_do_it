@@ -9,4 +9,4 @@ gem 'sass'
 gem 'public_suffix', '1.0.0'
 gem 'dm-sqlite-adapter', :group => :development
 gem 'dm-postgres-adapter', :group => :production
-
+gem 'pg', :group => :production
