@@ -5,5 +5,8 @@ gem 'json', '~> 1.6'
 gem "sinatra", '1.2.6'
 gem 'slim', '~> 1.0'
 gem 'data_mapper'
+gem 'sass'
 gem 'public_suffix', '1.0.0'
-gem 'dm-sqlite-adapter'
+gem 'dm-sqlite-adapter', :group => :development
+gem 'dm-postgres-adapter', :group => :production
+
